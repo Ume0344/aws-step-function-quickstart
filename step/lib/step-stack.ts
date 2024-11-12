@@ -8,9 +8,9 @@ export class StepStack extends Stack {
     super(app, id);
 
     const helloFunction = new Function(this, 'MyLambdaFunction', {
-      code: Code.fromInline(`
-        def handler(event, context):
-            return "Hello World!"`),
+      code: Code.fromInline(`def handler(event, context):
+        print("Hi")
+        return "Hello World!"`),
       runtime: Runtime.PYTHON_3_10,
       handler: "index.handler",
       timeout: Duration.seconds(3)
