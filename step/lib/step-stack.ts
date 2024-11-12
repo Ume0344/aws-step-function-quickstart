@@ -11,7 +11,7 @@ export class StepStack extends Stack {
       code: Code.fromInline(`
         def handler(event, context):
             return "Hello World!"`),
-      runtime: Runtime.NODEJS_18_X,
+      runtime: Runtime.PYTHON_3_10,
       handler: "index.handler",
       timeout: Duration.seconds(3)
     });
